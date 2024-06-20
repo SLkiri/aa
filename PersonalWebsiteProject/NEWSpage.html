@@ -1,0 +1,155 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="saat.css" type="text/css"> 
+<style type="text/css">
+body {
+	background-color: #000;
+	color: #FFF;
+	font-family: "Blackoak Std";
+	margin:0 auto; 
+	width:1200px;
+	padding:0 auto;
+}
+body,td,th {
+	font-size: 16px;
+}
+ #banner{
+            width: 895px;
+            height: 465px;
+            margin: 50px auto;
+            position: relative;
+			border:5px solid #0f0;
+        }
+        #banner ul{
+            position: absolute;
+            left: 600px;
+            top: 380px;
+		
+        }
+        #banner li{
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            list-style: none;
+            float: left;
+            margin: 10px 10px;
+        }
+        .b_li_out{
+            border: 1px solid #0F0;
+            color: #0F0;
+            background: #000;
+        }
+        .b_li_over{
+            border: none;
+            color: #000;
+            background: #0F0;
+        }
+</style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NEWS</title>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!--上端菜单栏-->
+<div style="width:1200px; margin-top:8px;margin-left:20px;">
+  <div align="center">
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li><a href="SaatOriginal.html">HOME</a></li>
+      <li><a href="ABOUTpage.html">ABOUT</a></li>
+      <li><a href="GALLERYpage.html">GALLERY</a>
+        <ul>
+          <li><a href="">TEXT</a>
+            <ul>
+              <li><a href="TASTEpage.html">TASTE</a></li>
+              <li><a href="NOVELpage.html">NOVEL</a></li>
+            </ul>
+          </li>
+          <li><a href="MUSICpage.html">MUSIC</a></li>
+          <li><a href="VIDEOpage.html">VIDEO</a></li>
+        </ul>
+      </li>
+      <li><a href="NEWSpage.html">NEWS</a></li>
+      <li><a href="CONTACTpage.html">CONTACT</a></li>
+    </ul>
+  </div>
+</div>
+
+<div>
+<h1>2020.05</h1>
+</div>
+<div class="pic">
+	 <div align="center"><a target="_blank" href="https://weibo.com/ttarticle/p/show?id=2309404500195395108997"><img src="图片/最新文章.png" alt=""></a>
+	   <span>
+       最新文章 | 首日炸服的山海镜花，如何让用户集体失忆直呼真香？
+       </span></div>
+</div>
+
+<h1>2019.08</h1>
+<div id="banner">
+    <div align="center"><img id="img" src="图片/img/1.png" style="margin-top:20px">
+    </div>
+    <ul>
+    <li class="b_li_out">1</li>
+    <li class="b_li_out">2</li>
+    <li class="b_li_out">3</li>
+    <li class="b_li_out">4</li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var urls=new Array("图片/img/1.png","图片/img/3.png","图片/img/4.png","图片/img/5.png");
+    var lis=document.getElementById("banner").getElementsByTagName("li");
+    var Img=document.getElementById("img");
+    var len=lis.length;
+    for(var i=0;i<len;i++){
+        /*鼠标移入事件*/
+        lis[i].onmouseover=function (){
+            for(var j=0;j<len;j++){
+                if(this==lis[j]){
+                    lis[j].className="b_li_over";
+                    Img.src=urls[j];
+                }
+            }
+        }
+        /*鼠标移出事件*/
+        lis[i].onmouseout=function () {
+            for(var j=0;j<len;j++){
+                if(this==lis[j]){
+                    lis[j].className="b_li_out";
+                }
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+  </script>
+</body>
+</html>
